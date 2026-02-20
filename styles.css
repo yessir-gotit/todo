@@ -3,3 +3,12 @@
 * {
     font-family: "Inter", sans-serif;
 }
+
+.theme-toggle-wrapper {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle-wrapper.visible {
+    opacity: 1;
+}

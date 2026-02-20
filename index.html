@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ToDo</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js" defer></script>
@@ -19,6 +19,16 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+    <script>
+        const currentTheme = localStorage.getItem('theme');
+        // Loading theme
+        if (currentTheme){
+            document.documentElement.setAttribute('data-theme',currentTheme);
+        }
+    </script>
+
 </head>
 <body class="w-full max-w-md mx-auto mt-5 p-5">
     <header class="flex justify-between items-center">
@@ -26,10 +36,10 @@
             <p class="opacity-85">Welcome Back</p>
             <h3 class="font-bold text-4xl">My Tasks</h3>
         </div>
-        <div>
+        <div class="theme-toggle-wrapper">
             <label class="swap swap-rotate">
                 <!-- this hidden checkbox controls the state -->
-                <input type="checkbox" />
+                <input type="checkbox" id="theme-toggle"/>
 
                 <!-- sun icon -->
                 <svg
@@ -86,8 +96,8 @@
                 <button class="btn btn-soft btn-error ">Clear Completed</button>
             </div>
 
-            <div id="empty-state" class="flex flex-col justify-center items-center mt-25">
-                <div class="w-17 h-17 bg-base-200 rounded-full flex justify-center items-center">
+            <div id="empty-state" class="flex flex-col justify-center items-center mt-24">
+                <div class="w-16 h-16 bg-base-200 rounded-full flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                     </svg>
