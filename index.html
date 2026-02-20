@@ -63,7 +63,7 @@
     </header>
 
     <main>
-        <section id="progress-bar" class="mt-10 bg-base-200 rounded-[12px] p-5 flex flex-col gap-5">
+        <section id="progress-bar" class="mt-10 bg-base-200 rounded-xl p-5 flex flex-col gap-5">
             <div class="flex justify-between items-center">
                 <h3 class="text-[15px] opacity-80">Progress</h3>
                 <p class="text-green-500 font-bold">0/0 done</p>
@@ -76,11 +76,10 @@
             <div>
                 <fieldset class="w-full">
                     <div class="flex justify-between items-center gap-5">
-                        <input
-                        type="text"
+                        <input type="text"
                         placeholder="What needs to be done?"
-                        class="input input-bordered flex-1 bg-base-200"/>
-                        <button class="btn btn-success rounded-[5px]"> 
+                        class="input input-bordered flex-1 bg-base-200" id="value"/>
+                        <button class="btn btn-success rounded-[5px]" id="add-btn"> 
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M12 5v14M5 12h14"/>
                             </svg>
@@ -105,6 +104,10 @@
                 </div>
                 <p class="mt-5 opacity-80">No tasks yet</p>
                 <p class="mt-1 opacity-80">Add a task above to get started!</p>
+            </div>
+
+            <div id="task-list" class="flex flex-col justify-center items-center gap-3 w-full">
+                
             </div>
         </section>
     </main>
